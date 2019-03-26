@@ -2,7 +2,7 @@
 
 class Pikachu extends Pokemon
 {
-	public $energytype = 'Lighting';
+	public $energytype = "Lightning";
 	public $hitpoints = '60';
 	public $health = '60';
 	public $weakness = 'Fire';

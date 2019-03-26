@@ -1,5 +1,8 @@
 <?php
 
+require 'Pikachu.php';
+require 'Charmeleon.php';
+
 class Pokemon
 {
 	public $name;
@@ -19,9 +22,9 @@ class Pokemon
 		$this->resistance = $resistance;
 	}
 
-	public function __toString(){
-		return 'Pokemon: ' . $this->name;
-	}
+	// public function __toString(){
+	// 	return 'Pokemon: ' . $this->name;
+	// }
 }
 ?>
 
