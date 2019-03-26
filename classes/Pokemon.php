@@ -11,8 +11,9 @@ class Pokemon
 	public $health;
 	public $weakness;
 	public $resistance;
+	public $attacks;
 
-	public function __construct($name, $energytype, $hitpoints, $health, $weakness, $resistance)
+	public function __construct($name, $energytype, $hitpoints, $health, $weakness, $resistance, $attacks)
 	{
 		$this->name = $name;
 		$this->energytype = $energytype;
@@ -20,24 +21,7 @@ class Pokemon
 		$this->health = $health;
 		$this->weakness = $weakness;
 		$this->resistance = $resistance;
+		$this->attacks = $attacks;
 	}
-
-	// public function __toString(){
-	// 	return 'Pokemon: ' . $this->name;
-	// }
-}
+} 
 ?>
-
-<!--function getGender(){
-		return $this->gender;
-	}
-
-	function setGender($gender){
-	 	if ($gender == 'Male'){
-	 		$this->gender = 1;
-	 	} else if($gender == 'Female'){
-	 		$this->gender = 2;
-	 	} else{
-	 		$this->gender = 0;
-	 	}
-	} -->

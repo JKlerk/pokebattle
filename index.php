@@ -14,22 +14,50 @@ $charmeleon = new Charmeleon('Charmeleon');
 
 <body>
 <div class="flex justify-center mt-20">
-	<div class="mr-5 p-5 bg-grey-lightest rounded shadow">
-		<p>Name: <?php echo $pikachu->name; ?></p>
-		<p>Energytype: <?php echo $pikachu->energytype; ?></p>
-		<p>Hitpoints: <?php echo $pikachu->hitpoints; ?></p>
-		<p>Health: <?php echo $pikachu->health; ?></p>
-		<p>Weakness: <?php echo $pikachu->weakness; ?></p>
-		<p>Resistance: <?php echo $pikachu->resistance; ?></p>
+	<div class="mr-20">	
+		<div class="bg-green rounded-t"><p class="text-center text-white my-auto" style="font-size: small;">60/<?php echo $pikachu->health; ?></p></div>
+		<div class="p-5 bg-grey-lightest rounded-b shadow leading-tight">
+			<p>Name: <?php echo $pikachu->name; ?></p>
+			<p>Energytype: <span class="text-yellow-dark"><?php echo $pikachu->energytype; ?></span></p>
+			<p>Hitpoints: <?php echo $pikachu->hitpoints; ?></p>
+			<p>Health: <?php echo $pikachu->health; ?></p>
+			<p>Weakness: <span class="text-orange-dark"><?php echo $pikachu->weakness; ?></span></p>
+			<p>Resistance: <span class="text-grey-dark"><?php echo $pikachu->resistance; ?></span></p>
+		</div>
 	</div>
-
-	<div class="p-5 bg-grey-lightest rounded shadow">
-		<p>Name: <?php echo $charmeleon->name; ?></p>
-		<p>Energytype: <?php echo $charmeleon->energytype; ?></p>
-		<p>Hitpoints: <?php echo $charmeleon->hitpoints; ?></p>
-		<p>Health: <?php echo $charmeleon->health; ?></p>
-		<p>Weakness: <?php echo $charmeleon->weakness; ?></p>
-		<p>Resistance: <?php echo $charmeleon->resistance; ?></p>
+	<div>  
+		<div class="bg-green rounded-t"><p class="text-center text-white my-auto" style="font-size: small;">60/<?php echo $charmeleon->health; ?></p></div>
+		<div class="p-5 bg-grey-lightest rounded-b shadow leading-tight">
+			<p>Name: <?php echo $charmeleon->name; ?></p>
+			<p>Energytype: <span class="text-orange-dark"><?php echo $charmeleon->energytype; ?></span></p>
+			<p>Hitpoints: <?php echo $charmeleon->hitpoints; ?></p>
+			<p>Health: <?php echo $charmeleon->health; ?></p>
+			<p>Weakness: <span class="text-blue-dark"><?php echo $charmeleon->weakness; ?></span></p>
+			<p>Resistance: <span class="text-yellow-dark"><?php echo $charmeleon->resistance; ?></span></p>
+		</div>
 	</div>
 </div>
+<div class="mt-20">
+	<div class="flex justify-center">
+		<div class="bg-grey-dark rounded-t w-1/2 shadow text-white text-center p-2">
+			<p>Textarea</p>
+		</div>
+	</div>
+	<div class="flex justify-center">
+		<div class="bg-white rounded-b shadow p-4 w-1/2 border leading-normal">
+			<p><span class="font-bold"><?php echo $pikachu->name; ?></span> attacks <span class="font-bold"><?php echo $charmeleon->name ?></span> with an <span class="text-yellow-dark"><?php echo $pikachu->attacks[0] ?></span> attack!</p>
+			<p><span class="font-bold"><?php echo $charmeleon->name ?></span> loses <?php echo 50/10 ?>hp because he has resistance to <span class="text-yellow-dark"><?php echo $charmeleon->resistance ?></span>. He has <span class="text-red-dark"><?php echo $charmeleon->health -50/10; ?>hp</span> left.
+			<p><span class="font-bold"><?php echo $charmeleon->name ?></span> attacks <span class="font-bold"><?php echo $pikachu->name ?></span> with an <span class="text-orange-dark"><?php echo $charmeleon->attacks[1]?></span> attack!</p>
+			<p><span class="font-bold"><?php echo $pikachu->name; ?></span> loses <?php echo 30*1.5 ?>hp because he as a weakness against <span class="text-orange-dark"><?php echo $pikachu->weakness?></span> attacks! He has <span class="text-red-dark"><?php echo $pikachu->health -30*1.5; ?>hp</span> left.
+		</div>
+	</div>
+</div>
+
+
 </body>
+
+
+
+
+
+
