@@ -5,8 +5,8 @@ class Charmeleon extends Pokemon
 	public $energytype = "Fire";
 	public $hitpoints = '60';
 	public $health = '60';
-	public $weakness = 'Water';
-	public $resistance = 'Lightning';
+	public $weakness = ['Water', '2'];
+	public $resistance = ['Lightning', '10'];
 	public $attacks = [
 		'Head butt',
 		'Flare' 
