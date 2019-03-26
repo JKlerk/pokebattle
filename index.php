@@ -46,8 +46,8 @@ $charmeleon = new Charmeleon('Charmeleon');
 	<div class="flex justify-center">
 		<div class="bg-white rounded-b shadow p-4 w-1/2 border leading-normal">	
 			<p><span class="font-bold"><?php echo $pikachu->name; ?></span> attacks <span class="font-bold"><?php echo $charmeleon->name ?></span> with an <span class="text-yellow-dark"><?php echo $pikachu->attacks[0] ?></span> attack!</p>
-			<p><span class="font-bold"><?php echo $charmeleon->name ?></span> loses <?php echo $pikachu->attacks[1]/$charmeleon->resistance[1] ?>hp because he has resistance to <span class="text-yellow-dark"><?php echo $charmeleon->resistance[0] ?></span>. He has <span class="text-red-dark"><?php echo $charmeleon->health - $pikachu->attacks[1] / $charmeleon->resistance[1]; ?>hp</span> left.
-			<p><span class="font-bold"><?php echo $charmeleon->name ?></span> attacks <span class="font-bold"><?php echo $pikachu->name ?></span> with an <span class="text-orange-dark"><?php echo $charmeleon->attacks[2]?></span> attack!</p>
+			<p><span class="font-bold"><?php echo $charmeleon->name; ?></span> loses <?php echo $pikachu->attacks[1]/$charmeleon->resistance[1] ?>hp because he has resistance to <span class="text-yellow-dark"><?php echo $charmeleon->resistance[0] ?></span>. He has <span class="text-red-dark"><?php echo $charmeleon->health - $pikachu->attacks[1]/$charmeleon->resistance[1]; ?>hp</span> left.
+			<p><span class="font-bold"><?php echo $charmeleon->name; ?></span> attacks <span class="font-bold"><?php echo $pikachu->name ?></span> with an <span class="text-orange-dark"><?php echo $charmeleon->attacks[2]?></span> attack!</p>
 			<p><span class="font-bold"><?php echo $pikachu->name; ?></span> loses <?php echo $charmeleon->attacks[3]*$pikachu->weakness[1] ?>hp because he as a weakness against <span class="text-orange-dark"><?php echo $pikachu->weakness[0]?></span> attacks! He has <span class="text-red-dark"><?php echo $pikachu->health - $charmeleon->attacks[3]*$pikachu->weakness[1]; ?>hp</span> left.
 		</div>
 	</div>
