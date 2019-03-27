@@ -16,7 +16,7 @@ $charmeleon = new Charmeleon('Charmeleon');
 <div class="flex justify-center mt-20">
 	<div class="mr-20">	
 		<div class="bg-green rounded-t"><p class="text-center text-white my-auto" style="font-size: small;">60/<?php echo $pikachu->health; ?></p></div>
-		<div class="p-5 bg-grey-lightest rounded-b shadow leading-tight">
+		<div class="p-5 bg-grey-lightest border rounded-b shadow leading-tight">
 			<p>Name: <?php echo $pikachu->name; ?></p>
 			<p>Energytype: <span class="text-yellow-dark"><?php echo $pikachu->energytype; ?></span></p>
 			<p>Hitpoints: <?php echo $pikachu->hitpoints; ?></p>
@@ -27,7 +27,7 @@ $charmeleon = new Charmeleon('Charmeleon');
 	</div>
 	<div>  
 		<div class="bg-green rounded-t"><p class="text-center text-white my-auto" style="font-size: small;">60/<?php echo $charmeleon->health; ?></p></div>
-		<div class="p-5 bg-grey-lightest rounded-b shadow leading-tight">
+		<div class="p-5 bg-grey-lightest border rounded-b shadow leading-tight">
 			<p>Name: <?php echo $charmeleon->name; ?></p>
 			<p>Energytype: <span class="text-orange-dark"><?php echo $charmeleon->energytype; ?></span></p>
 			<p>Hitpoints: <?php echo $charmeleon->hitpoints; ?></p>
