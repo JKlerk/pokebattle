@@ -7,15 +7,10 @@ class Charmeleon extends Pokemon
 	public $health = '60';
 	public $weakness = ['Water', 2];
 	public $resistance = ['Lightning', 10];
-	public $attacks = [
-		'Head butt',
-		10,
-		'Flare',
-		30
-	];
 
-	function __construct($name)
+	public function __construct($name)
 	{
-		parent::__construct($name, $this->energytype, $this->hitpoints, $this->health, $this->weakness, $this->resistance, $this->attacks);
+		parent::__construct($name, $this->energytype, $this->hitpoints, $this->health, $this->weakness, $this->resistance, [new Attack('Head butt', 10),
+		new Attack('Flare', 30)]);
 	}
 }
