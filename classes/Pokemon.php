@@ -23,6 +23,7 @@ class Pokemon
 		$this->weakness = $weakness;
 		$this->resistance = $resistance;
 		$this->attacks = $attacks;
+		// Styling
 		if ($this->energytype == 'Lightning'){
 			$this->color = 'yellow';
 		} elseif ($this->energytype == 'Fire') {
@@ -44,16 +45,9 @@ class Pokemon
 			$damage = $attack->damage / $opponent->resistance[1];
 		}
 
-		// Styling
-		if ($this->energytype == 'Lightning'){
-			$color = 'yellow';
-		} elseif ($this->energytype == 'Fire') {
-			$color = 'orange';
-		}
-
 		$health = $opponent->health - $damage;
 
-		return '<span class="font-bold">' . $this->name . '</span> does an <span class="text-'. $color .'-dark">'. $attack->name .'</span> attack against <span class="font-bold">'. $opponent->name .'</span>, he has <span class="text-red font-bold">' . $health . 'hp</span> left.';
+		return '<span class="font-bold">' . $this->name . '</span> does an <span class="text-'. $this->color .'-dark">'. $attack->name .'</span> attack against <span class="font-bold">'. $opponent->name .'</span>, he has <span class="text-red font-bold">' . $health . 'hp</span> left.';
 	}
 } 
 ?>
