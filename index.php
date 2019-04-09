@@ -45,8 +45,8 @@ $charmeleon = new Charmeleon('Charmeleon');
 	</div>
 	<div class="flex justify-center">
 		<div class="bg-white rounded-b shadow p-4 w-1/2 border leading-normal">	
-			<?php echo $pikachu->attack($pikachu->attacks[0], $charmeleon); ?>
-			<br><?php echo $charmeleon->attack($charmeleon->attacks[0], $pikachu); ?>
+			<p><?php echo $pikachu->attack($pikachu->attacks[0], $charmeleon); ?></p>
+			<p><?php echo $charmeleon->attack($charmeleon->attacks[0], $pikachu); ?></p>
 		</div>
 	</div>
 </div>

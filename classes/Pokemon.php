@@ -39,7 +39,7 @@ class Pokemon
 
 		$health = $opponent->health - $damage;
 
-		return $this->name . ' does an '. $attack->name .' attack against '. $opponent->name .', his health: ' . $health;
+		return $this->name . ' does an '. $attack->name .' attack against '. $opponent->name .', his health: <span class="text-red">' . $health . '</span>';
 	}
 } 
 ?>
