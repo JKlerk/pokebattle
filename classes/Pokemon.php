@@ -1,8 +1,11 @@
 <?php
 
-require 'Pikachu.php';
-require 'Charmeleon.php';
+require 'pokemons/Pikachu.php';
+require 'pokemons/Charmeleon.php';
 require 'Attack.php';
+require 'Resistance.php';
+require 'Weakness.php';
+
 
 class Pokemon
 {
@@ -33,21 +36,42 @@ class Pokemon
 		}
 	}
 
+	/**
+	 * Make the calculations whenever a pokemon attacks his opponent.
+	 * 
+	 * @param  $attack
+	 * @param  $opponent
+	 * @return string
+	 */
 	public function attack($attack, $opponent)
 	{
 		$damage = $attack->damage;
 
-		if ($this->energytype == $opponent->weakness[0]) {
-			$damage = $attack->damage * $opponent->weakness[1];
+		if ($this->energytype == $opponent->weakness->name) {
+			$damage = $attack->damage * $opponent->weakness->multiplier;
 		}
 
-		if ($this->energytype == $opponent->resistance[0]) {
-			$damage = $attack->damage / $opponent->resistance[1];
+		if ($this->energytype == $opponent->resistance->name) {
+			$damage = $attack->damage - $opponent->resistance->multiplier;
 		}
 
+		return $this->takeDamage($opponent, $damage, $attack);
+		
+	}
+
+
+	/**
+	 * Take the damage, from the attack, and substract it from the health and returns the final output.
+	 * 
+	 * @param  $opponent
+	 * @param  $damage
+	 * @param  $attack
+	 * @return string
+	 */
+	public function takeDamage($opponent, $damage, $attack){
 		$health = $opponent->health - $damage;
 
-		return '<span class="font-bold">' . $this->name . '</span> does an <span class="text-'. $this->color .'-dark">'. $attack->name .'</span> attack against <span class="font-bold">'. $opponent->name .'</span>, he has <span class="text-red font-bold">' . $health . 'hp</span> left.';
+		return '<span class="font-bold text-'. $this->color .'-dark">' . $this->name . '</span> does an <span class="text-'. $this->color .'-dark">'. $attack->name .'</span> attack against <span class="font-bold text-'. $opponent->color .'-dark">'. $opponent->name .'</span>, he has <span class="text-red font-bold">' . $health . 'hp</span> left.';
 	}
 } 
 ?>

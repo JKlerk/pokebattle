@@ -20,8 +20,8 @@ $charmeleon = new Charmeleon('Charmeleon');
 			<p>Energytype: <span class="text-<?php echo $pikachu->color ?>-dark"><?php echo $pikachu->energytype; ?></span></p>
 			<p>Hitpoints: <?php echo $pikachu->hitpoints; ?></p>
 			<p>Health: <?php echo $pikachu->health; ?></p>
-			<p>Weakness: <span class="text-orange-dark"><?php echo $pikachu->weakness[0]; ?></span></p>
-			<p>Resistance: <span class="text-grey-dark"><?php echo $pikachu->resistance[0]; ?></span></p>
+			<p>Weakness: <span class="text-orange-dark"><?php echo $pikachu->weakness->name; ?></span></p>
+			<p>Resistance: <span class="text-grey-dark"><?php echo $pikachu->resistance->name; ?></span></p>
 		</div>
 	</div>
 	<div>  
@@ -31,8 +31,8 @@ $charmeleon = new Charmeleon('Charmeleon');
 			<p>Energytype: <span class="text-<?php echo $charmeleon->color ?>-dark"><?php echo $charmeleon->energytype; ?></span></p>
 			<p>Hitpoints: <?php echo $charmeleon->hitpoints; ?></p>
 			<p>Health: <?php echo $charmeleon->health; ?></p>
-			<p>Weakness: <span class="text-blue-dark"><?php echo $charmeleon->weakness[0]; ?></span></p>
-			<p>Resistance: <span class="text-yellow-dark"><?php echo $charmeleon->resistance[0]; ?></span></p>
+			<p>Weakness: <span class="text-blue-dark"><?php echo $charmeleon->weakness->name; ?></span></p>
+			<p>Resistance: <span class="text-yellow-dark"><?php echo $charmeleon->resistance->name; ?></span></p>
 		</div>
 	</div>
 </div>
