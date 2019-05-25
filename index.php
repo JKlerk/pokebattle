@@ -8,7 +8,7 @@ $charmeleon = new Charmeleon('Charmeleon');
 ?>
 <head>
 	<title>Pokebattle</title>
-	<link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/tailwindcss@0.7.4/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
 <body>
