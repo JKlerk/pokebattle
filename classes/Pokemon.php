@@ -9,10 +9,10 @@ require 'Weakness.php';
 
 class Pokemon
 {
-	public $name;
-	public $energytype;
-	public $hitpoints;
-	public $health;
+	protected $name;
+	protected $energytype;
+	protected $hitpoints;
+	protected $health;
 	public $weakness;
 	public $resistance;
 	public $attacks;
@@ -26,13 +26,34 @@ class Pokemon
 		$this->weakness = $weakness;
 		$this->resistance = $resistance;
 		$this->attacks = $attacks;
-		// Styling
+	}
+
+	/**
+	 * Returns name of pokemon.
+	 * 
+	 * @return string
+	 */
+	public function getName(){
+		return $this->name;
+	}
+
+	public function getPokeData($health){
+		$health = $this->health;
+		return $health;
+	}
+
+	/**
+	 * Returns color based on energytype of pokemon.
+	 * 
+	 * @return string
+	 */
+	public function getColor(){
 		if ($this->energytype == 'Lightning'){
-			$this->color = 'yellow';
+			return 'yellow';
 		} elseif ($this->energytype == 'Fire') {
-			$this->color = 'orange';
+			return 'orange';
 		} elseif ($this->energytype == 'Water') {
-			$this->color = 'blue';
+			return 'blue';
 		}
 	}
 
@@ -71,7 +92,7 @@ class Pokemon
 	public function takeDamage($opponent, $damage, $attack){
 		$health = $opponent->health - $damage;
 
-		return '<span class="font-bold text-'. $this->color .'-dark">' . $this->name . '</span> does an <span class="text-'. $this->color .'-dark">'. $attack->name .'</span> attack against <span class="font-bold text-'. $opponent->color .'-dark">'. $opponent->name .'</span>, he has <span class="text-red font-bold">' . $health . 'hp</span> left.';
+		return '<span class="font-bold text-'. $this->getColor() .'-dark">' . $this->getName() . '</span> does an <span class="text-'. $this->getColor() .'-dark">'. $attack->name .'</span> attack against <span class="font-bold text-'. $opponent->getColor() .'-dark">'. $opponent->getName() .'</span>, he has <span class="text-red font-bold">' . $health . 'hp</span> left.';
 	}
 } 
 ?>

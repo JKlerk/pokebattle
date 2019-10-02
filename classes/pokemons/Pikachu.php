@@ -7,7 +7,7 @@ class Pikachu extends Pokemon
 	public $health = '60';
 
 	/**
-	 * Defines the pokemon based on his parent.
+	 * Creates the pokemon based on his parent.
 	 * 
 	 * @param $name
 	 */
